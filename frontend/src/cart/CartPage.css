@@ -1,0 +1,41 @@
+.cart-page {
+    padding: 20px;
+  }
+  
+  .cart-items {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cart-item {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .cart-item-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  
+  .cart-item-info {
+    margin-left: 20px;
+  }
+  
+  .cart-item-name {
+    font-size: 1.2em;
+  }
+  
+  .cart-item-price {
+    color: #28a745;
+  }
+  
+  .checkout-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  

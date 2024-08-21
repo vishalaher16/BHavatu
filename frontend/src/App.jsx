@@ -11,6 +11,8 @@ import Products from "./Products/productlist";
 import Assistant from "./REyna/reyna";
 import Cart from "./cart/CartPage";
 import Payment from "./cart/checkoutpage";
+import ChatbotButton from './REyna/reyna'; 
+
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -18,6 +20,7 @@ function App() {
   return (
     <>
       <div className="App">
+        <ChatbotButton/>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -29,6 +32,8 @@ function App() {
           <Route path="/Products" element={<Products setCart={setCart} />} />
           <Route path="/Cart" element={<Cart cart={cart} />} />
           <Route path="/Payment" element={<Payment />} />
+          <Route path="/chatbot" element={<ChatbotButton />} />
+          
         </Routes>
       </div>
     </>

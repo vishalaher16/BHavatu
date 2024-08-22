@@ -1,32 +1,78 @@
 import React from "react";
 import "./Home.css";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
     <>
-      <div className="top">
-        <section id="home" className="intro">
-          <h1>Welcome to Bhavatu</h1>
-          <p>
-            Welcome to Bhavatu, the ultimate AI-powered Vastu application
-            designed to revolutionize your home living experience. With Bhavatu,
-            you gain unparalleled access to comprehensive statistical analysis
-            and detailed reports on the Vastu of your home. Our sophisticated AI
-            system ensures you receive daily Vastu feed notifications, tailored
-            specifically to your personal Rashi and astrological data. Engage
-            with our intuitive AI chatbot for personalized guidance and support,
-            enhancing your journey toward harmonious living. Explore our curated
-            products section, offering an array of Manis and Mudras to bring
-            good luck and positivity into your home. Additionally, our platform
-            provides a dedicated space for you to save and manage your Kundlis
-            effortlessly. Experience the confluence of tradition and technology
-            with Bhavatu, and embark on a path to balanced and prosperous
-            living.
-          </p>
-        </section>
+       {/* <section class="promo-section">
+        <div class="content-container">
+            <h1>Get Your Free <span>2 Weeks</span> Trial Right Here</h1>
+            <p>Celebrated delightful an especially increasing instrument am. Indulgence contrasted sufficient to unpleasant in insensible favourable.</p>
+            <div class="buttons">
+                <Link to="/DailyFeed" class="btn btn-start">Get Started</Link>
+                <Link to="/DailyFeed" class="btn btn-play"><span class="play-icon">▶</span></Link>
+            </div>
+        </div>
+    </section> */}
+      <section class="promo-section">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1> Bhavatu leverages advanced AI algorithms  <span class="highlight">to provide you with
+            comprehensive statistical analysis</span> Trial <br/>detailed reports about
+            the Vastu of your home</h1>
+            <p class='para'>By assessing various parameters and
+                  aligning them with Vastu principles, our app helps you
+                  understand the current state of your living environment and
+                  offers actionable insights for improvement..</p>
+            <div class="buttons">
+                <Link to="/DailyFeed" class="btn">Get Started</Link>
+                <Link to="/DailyFeed" class="play-btn">
+                    <div class="play-icon">▶</div>
+                </Link>
+            </div>
+        </div>
+    </section>
+    <div class="wrapper">
+  {/* <h2 class="title-center">Your Title Here</h2> */}
+  <div class="grid-cards">
+    <div class="card-container">
+      <div class="gradient-wrapper green-gradient">
+        <img src="image1.jpg" alt="Card Image"/>
+        <h3 class="text-title">Card Title 1</h3>
+        <p class="text-description">This is a description for the first card.</p>
       </div>
+    </div>
 
-      <div class="container">
+    <div class="card-container">
+      <div class="gradient-wrapper white-gradient">
+        <img src="image2.jpg" alt="Card Image"/>
+        <h3 class="text-title">Card Title 2</h3>
+        <p class="text-description">This is a description for the second card.</p>
+      </div>
+    </div>
+
+    <div class="card-container">
+      <div class="gradient-wrapper yellow-gradient">
+        <img src="image3.jpg" alt="Card Image"/>
+        <h3 class="text-title">Card Title 3</h3>
+        <p class="text-description">This is a description for the third card.</p>
+      </div>
+    </div>
+
+    <div class="card-container">
+      <div class="gradient-wrapper blue-gradient">
+        <img src="image4.jpg" alt="Card Image"/>
+        <h3 class="text-title">Card Title 4</h3>
+        <p class="text-description">This is a description for the fourth card.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+      {/* <div class="container">
         <ul class="cards">
           <li class="card">
             <div>
@@ -234,7 +280,7 @@ export default function Home() {
           </ul>
           <button class="btn-primary">Get Started</button>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

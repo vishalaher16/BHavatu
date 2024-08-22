@@ -1,8 +1,7 @@
-// src/components/dailyfeed.jsx
 import React, { useEffect, useState } from 'react';
 import { db } from '../firebase';
 import { collection, getDocs } from 'firebase/firestore';
-import './dailyfeed.css'; // Import your CSS file
+import './dailyfeed.css';
 
 const DailyFeed = () => {
   const [feeds, setFeeds] = useState([]);
@@ -24,13 +23,14 @@ const DailyFeed = () => {
 
   return (
     <div className="cccontainer">
-      {feeds.map(feed => (
-        <div key={feed.id} className="cccard">
+      {feeds.map((feed, index) => (
+        <div key={feed.id} className={`cccard ${index % 2 === 0 ? 'cccard-left' : 'cccard-right'}`}>
           <div className="cccard-image">
             <img src={feed.imageURL} alt={feed.title} />
           </div>
           <div className="cccard-content">
-            <h1 className="cccard-number">{feed.name}</h1>
+            <h1 className="cccard-number">{`0${index + 1}`}</h1>
+            <h2 className="cccard-name">{feed.name}</h2>
             <h2 className="cccard-title">{feed.title}</h2>
             <p className="cccard-description">{feed.description}</p>
           </div>

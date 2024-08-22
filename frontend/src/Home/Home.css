@@ -1,296 +1,174 @@
-.top{
-   background-image: url(https://i.ibb.co/wcSd7pm/583891-space-planet.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: 0;
-     
 
-    
 
-}
-.intro {
-    padding: 100px 20px ;
-    text-align: center;
-   
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 60px;
-   
-    transition: 0.3s ease-in-out ;
-   
-  }
-  .top :hover{
-   background-image: url(https://i.ibb.co/8Pb36jL/583891-space-planet2.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    color: azure;
-    box-shadow: 0 4px 6px rgba(222, 221, 221, 0.1);
-  }
-  
-  .intro h1 {
-    font-size: 32px;
-    margin-bottom: 20px;
-  }
-  
-  .intro p {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-  
-  .horizontal-scroll-container {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth; /* Optional: Add smooth scrolling behavior */
-    padding: 10px 0; /* Adjust as needed */
-  }
-  
-  .item {
-    flex: 0 0 auto;
-    margin-right: 10px; /* Adjust spacing between items */
-  }
-  
-  .item img {
-    width: 150px; /* Adjust image width */
-    height: 200px; /* Adjust image height */
-    object-fit: cover;
-    border-radius: 5px;
-  }
-  
-  .item:last-child {
-    margin-right: 0; /* Remove margin for the last item to prevent unnecessary spacing */
-  }
-  :root {
-    --orange: #fd9940;
-    --darkorange: #dd7d25;
-    --platinum: #e5e5e5;
-    --black: #2b2d42;
-    --white: #fff;
-    --thumb: #edf2f4;
-  }
-  
-  * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
-  
-
-  .container {
-    font: 16px / 24px "Rubik", sans-serif;
-    color: var(--black);
-    background: var(--platinum);
-    margin: 50px 0;
-    max-width: 1400px;
-    padding: 0 15px;
-    margin: 0 auto;
-  }
-  
-  h2 {
-    font-size: 32px;
-    margin-bottom: 1em;
-  }
-  
-  .cards {
-    display: grid;
-    grid-auto-columns: 100%;
-    grid-column-gap: 10px;
-    grid-auto-flow: column;
-    padding: 25px 0px;
-    list-style: none;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-  }
-  
-  .card {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    background: var(--white);
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
-    scroll-snap-align: start;
-    transition: all 0.2s;
-  }
-  
-  .card:hover {
-    color: var(--white);
-    background-color: #000;
-  }
-  
-  .card .card-title {
-    font-size: 20px;
-  }
-  
-  .card .card-content {
-    margin: 20px 0;
-    max-width: 85%;
-  }
-  
-  .card .card-link-wrapper {
-    margin-top: auto;
-  }
-  
-  .card .card-link {
-    display: inline-block;
-    text-decoration: none;
-    color: white;
-    background: var(--orange);
-    padding: 6px 12px;
-    border-radius: 8px;
-    transition: background 0.2s;
-  }
-  
-  .card:hover .card-link {
-    background: var(--darkorange);
-  }
-  
-  .cards::-webkit-scrollbar {
-    height: 10px;
-    width: 10px;
-  }
-  
-  .cards::-webkit-scrollbar-thumb,
-  .cards::-webkit-scrollbar-track {
-    border-radius: 92px;
-  }
-  
-  .cards::-webkit-scrollbar-thumb {
-    background: var(--darkorange);
-  }
-  
-  .cards::-webkit-scrollbar-track {
-    background: var(--thumb);
-  }
-  
-  @media (min-width: 500px) {
-    .cards {
-      grid-auto-columns: calc(50% - 10px);
-      grid-column-gap: 20px;
-    }
-  }
-  
-  @media (min-width: 700px) {
-    .cards {
-      grid-auto-columns: calc(calc(100% / 3) - 20px);
-      grid-column-gap: 30px;
-    }
-  }
-  
-  @media (min-width: 1100px) {
-    .cards {
-      grid-auto-columns: calc(25% - 30px);
-      grid-column-gap: 40px;
-    }
-  }
-  @import url('https://fonts.googleapis.com/css?family=Open+Sans');
-
-* {
-	box-sizing: border-box;
+.promo-section {
+  height: 100%;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  background-image: url('your-background-image.jpg'); /* Replace with the actual background image */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
 }
 
-.ff{
-    margin:20px;
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Adjust for darker overlay */
+  z-index: 1;
 }
 
-.text-center {
-	text-align: center;
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
 }
 
-.pricing-box-container {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-wrap: wrap;
-    margin-bottom: 50px;
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
 }
 
-.pricing-box {
-	background-color: #ffffff;
-	box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.5);
-	border-radius: 4px;
-	flex: 1;
-	padding: 0 30px 30px;
-	margin: 2%;
-	min-width: 250px;
-	max-width: 350px;
-    transition: 0.3s ease-in-out;
-}
-.pricing-box:hover{
-    border-radius: 30px;
-    color: #ffffff;
-    font-weight: bold;
+.highlight {
+  color: #ff4d4d; /* Highlight color */
 }
 
-.pricing-box h5 {
-	text-transform: uppercase;
+.para {
+  margin: 20px 0;
+  font-size: 1rem;
+  opacity: 0.85;
 }
 
-.price {
-	margin: 24px 0;
-	font-size: 36px;
-	font-weight: 900;
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.price sub, .price sup {
-	font-size: 16px;
-	font-weight: 100;
+.btn, .play-btn {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
 }
 
-.features-list {
-	padding: 0;
-	list-style-type: none;
+.btn:hover {
+  background-color: white;
+  color: #333;
 }
 
-.features-list li {
-	font-weight: 100;
-	padding: 12px 0;
-	font-weight: 100;
+.play-btn {
+  width: 13px;
+  height: 16px;
+  border-radius: 12%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.features-list li:not(:last-of-type) {
-	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+.play-icon {
+  font-size: 1.5rem;
+}
+.wrapper {
+  width: 100%;
+  padding: 0 20px; /* Padding to ensure some space on the sides */
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
-.btn-primary {
-	border-radius: 25px;
-	border: none;
-	background-color: #EC1362;
-	color: #ffffff;
-	cursor: pointer;
-	padding: 10px 15px;
-	margin-top: 20px;
-	text-transform: uppercase;
-	transition: all 0.1s ease-in-out;
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four cards in a row */
+  gap: 20px; /* Space between cards */
+  width: 100%;
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
-.btn-primary:hover {
-	box-shadow: 0px 2px 15px 0px rgba(235, 232, 232, 0.5);
-	transform: translateY(-3px);
+.card-container {
+  width: 100%;
+  display: flex; /* Flexbox to center content inside the card */
+  justify-content: center;
+  align-items: center;
 }
 
-.pricing-box-bg-image {
-	background-image: url('https://cf.ltkcdn.net/horoscopes/images/std/217767-800x526r1-zodiac-wheel.jpg');
-	background-size: cover;
-	background-position: center center;
-	color: #ffffff;
-    filter: grayscale(80%);
-}
-.pricing-box-bg-image:hover{
-    filter: grayscale(0%);
-    
-    
+.gradient-wrapper {
+  position: relative;
+  width: 100%; /* Full width of card container */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border for classiness */
+  background: rgba(0, 0, 0, 0.6); /* Transparent background */
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  height: 300px; /* Fixed height for consistent card size */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s; /* Smooth transitions */
 }
 
-.pricing-box-bg-image .features-list li {
-	border-bottom-color: rgba(255, 255, 255, 1);
+.gradient-wrapper:hover {
+  transform: translateY(-10px); /* Lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7); /* Stronger shadow on hover */
 }
 
-.pricing-box-bg-image .btn-primary {
-	background-color: #ffffff;
-	color: #000;
+.gradient-wrapper img {
+  width: 100%; /* Full width of card */
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  transition: transform 0.3s; /* Smooth image zoom effect */
 }
-p{
-   
-    font-size: 15px;
+
+.gradient-wrapper:hover img {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.green-gradient::after {
+  background: linear-gradient(71deg, #0d1212, #1a2a3a, #0d1212); /* Night sky tones */
+}
+
+.white-gradient::after {
+  background: linear-gradient(71deg, #121013, #2d2d2d, #121013); /* Dark gray for night effect */
+}
+
+.yellow-gradient::after {
+  background: linear-gradient(71deg, #110e0e, #2a2a2a, #110e0e); /* Darker yellow for night effect */
+}
+
+.blue-gradient::after {
+  background: linear-gradient(71deg, #0c0a0e, #1e2a3a, #0c0a0e); /* Blue night sky effect */
+}
+
+.text-title {
+  font-weight: 600;
+  color: white;
+  letter-spacing: -0.02em;
+  line-height: 40px;
+  font-size: 24px; /* Adjusted for better visibility */
+  padding-bottom: 8px;
+  margin: 0; /* Remove default margin */
+}
+
+.text-description {
+  font-weight: 400;
+  line-height: 24px;
+  color: hsla(0, 0%, 100%, 0.8);
+  font-size: 14px;
+  max-width: 100%;
+  margin: 0; /* Remove default margin */
 }

@@ -12,7 +12,7 @@ import Assistant from "./REyna/reyna";
 import Cart from "./cart/CartPage";
 import Payment from "./cart/checkoutpage";
 import ChatbotButton from './REyna/reyna'; 
-
+import Footer from './Footer';
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -22,6 +22,7 @@ function App() {
       <div className="App">
         <ChatbotButton/>
         <Navbar />
+       
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/vastu" element={<Vastu />} />
@@ -35,6 +36,8 @@ function App() {
           <Route path="/chatbot" element={<ChatbotButton />} />
           
         </Routes>
+        <Footer/>
+       
       </div>
     </>
   );

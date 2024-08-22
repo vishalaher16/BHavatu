@@ -6,16 +6,16 @@ const CartPage = ({ cart }) => {
     <div className="cart-page">
       <h1>Your Cart</h1>
       {cart.length === 0 ? (
-        <p>Your cart is empty.</p>
+        <p className="empty-cart">Your cart is empty.</p>
       ) : (
-        <div>
+        <div className="cart-items">
           {cart.map((item, index) => (
             <div key={index} className="cart-item">
               <img src={item.imageURL} alt={item.name} className="cart-item-image" />
               <div className="cart-item-info">
-                <h2>{item.name}</h2>
-                <p>{item.description}</p>
-                <p>₹{item.price}</p>
+                <h2 className="cart-item-name">{item.name}</h2>
+                <p className="cart-item-description">{item.description}</p>
+                <p className="cart-item-price">₹{item.price}</p>
               </div>
             </div>
           ))}

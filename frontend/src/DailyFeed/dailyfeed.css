@@ -1,65 +1,4 @@
-/* Styles for .ccard */
-.ccontainer {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 40px;
-}
-
-.ccard {
-  display: flex;
-  flex-direction: row;
-  background-color: #68686a;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  width: 100%; /* Keep width the same */
-  max-width: 700px; /* Optional: Set a max-width to ensure it doesn't get too wide */
-  height: 200px; /* Adjust height as needed */
-  margin: 0 auto; /* Center the card horizontally */
-}
-
-.ccard-content {
-  padding: 10px; /* Adjust padding to fit the smaller card size */
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.ccard-number {
-  font-size: 1.5rem; /* Adjust font size */
-  font-weight: bold;
-  color: #d1ff56;
-  margin: 0;
-}
-
-.ccard-title {
-  font-size: 1.25rem; /* Adjust font size */
-  margin: 5px 0;
-}
-
-.ccard-description {
-  font-size: 0.875rem; /* Adjust font size */
-  line-height: 1.4;
-}
-
-.ccard-image {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #333;
-}
-
-.ccard-image img {
-  width: 60%; /* Adjust width to fit the smaller card size */
-  height: 100%;
-  object-fit: cover;
-  border-radius: 0 10px 10px 0;
-}
-
-/* Styles for .cccard */
+/* src/components/dailyfeed.css */
 .cccontainer {
   display: flex;
   flex-direction: column;
@@ -70,14 +9,14 @@
 .cccard {
   display: flex;
   flex-direction: row;
-  background-color: #4f4f54;
+  background-color: #68686a;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  width: 100%; /* Keep width the same */
-  max-width: 700px; /* Optional: Set a max-width to ensure it doesn't get too wide */
-  height: 200px; /* Adjust height as needed */
-  margin: 0 auto; /* Center the card horizontally */
+  width: 100%;
+  max-width: 700px;
+  height: 200px;
+  margin: 0 auto;
 }
 
 .cccard-image {
@@ -92,11 +31,11 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 10px 0 0 10px;
+  border-radius: 0 10px 10px 0;
 }
 
 .cccard-content {
-  padding: 10px; /* Adjust padding to fit the smaller card size */
+  padding: 10px;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -104,18 +43,18 @@
 }
 
 .cccard-number {
-  font-size: 1.5rem; /* Adjust font size */
+  font-size: 1.5rem;
   font-weight: bold;
-  color: #d1ff56;
+  color: #e9ece0;
   margin: 0;
 }
 
 .cccard-title {
-  font-size: 1.25rem; /* Adjust font size */
+  font-size: 1.25rem;
   margin: 5px 0;
 }
 
 .cccard-description {
-  font-size: 0.875rem; /* Adjust font size */
+  font-size: 0.875rem;
   line-height: 1.4;
 }

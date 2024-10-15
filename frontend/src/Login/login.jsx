@@ -1,6 +1,6 @@
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
 import React, { useState } from 'react';
-import "./login.css"
+import './login.css'
 import { auth } from '../firebase'
 
 export default function SigIn() {

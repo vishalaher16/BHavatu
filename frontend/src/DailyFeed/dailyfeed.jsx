@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+  import React, { useEffect, useState } from 'react';
 import { db } from '../firebase';
 import { collection, getDocs } from 'firebase/firestore';
 import './dailyfeed.css';
@@ -8,6 +8,7 @@ const DailyFeed = () => {
 
   useEffect(() => {
     const fetchFeeds = async () => {
+
       try {
         const feedCollection = collection(db, 'dailyfeed');
         const feedSnapshot = await getDocs(feedCollection);
@@ -39,5 +40,5 @@ const DailyFeed = () => {
     </div>
   );
 };
-
 export default DailyFeed;
+

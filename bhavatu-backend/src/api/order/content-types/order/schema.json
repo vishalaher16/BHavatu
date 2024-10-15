@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Order",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "PaymentId": {
+      "type": "text"
+    },
+    "CustomerName": {
+      "type": "text"
+    },
+    "CustomerEmail": {
+      "type": "email"
+    },
+    "CustomerContact": {
+      "type": "biginteger"
+    },
+    "Subtotal": {
+      "type": "decimal"
+    },
+    "Items": {
+      "type": "json"
+    },
+    "Date": {
+      "type": "date"
+    }
+  }
+}

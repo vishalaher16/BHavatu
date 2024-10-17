@@ -7,7 +7,8 @@ import './ecomHeader.css'; // Ensure this path is correct
 import Search from '../search/search';
 import Cart from '../cart/Cart';
 import { useAppContext } from '../../utils/context'; // Adjust the import path according to your structure
-
+import "../prod/prod" ;
+import "../Category/category";
 const EcomHeader = () => {
     const navigate = useNavigate(); // Correctly initialize navigate
     const [scrolled, setScrolled] = useState(false);
@@ -37,8 +38,8 @@ const EcomHeader = () => {
             <header className={`main-header${scrolled ? ' sticky-header' : ''}`}>
                 <div className="header-content">
                     <ul>
-                        <li onClick={() => navigate("/")}>Home</li>
-                        <li>Cateegory</li>
+                        <li onClick={() => navigate('/prod')}>Home</li>
+                        <li onClick={() => navigate('/category')}>Cateegory</li>
                     </ul>
                     <div className="center"></div>
                     <div className="right">

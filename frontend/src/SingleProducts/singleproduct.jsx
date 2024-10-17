@@ -7,6 +7,7 @@ import useFetch from "../hooks/useFetch";
 import { useParams } from 'react-router-dom';
 import { Context } from '../../utils/context';
 import Cart from '../cart/Cart'; // Import the Cart component
+import EcomHeader from '../ecomHeader/ecomHeader';
 
 const SingleProduct = () => {
   const [quantity, setQuantity] = useState(1);
@@ -52,6 +53,8 @@ const SingleProduct = () => {
   const categoryId = categories?.[0]?.id; // Assuming you want the first category
 
   return (
+    <>
+   <EcomHeader/>
     <div className="singleproduct-maincontent">
       <div className="layout">
         <div className="singleproduct-page">
@@ -110,6 +113,7 @@ const SingleProduct = () => {
       {/* Related Products Section */}
       {categoryId && <RelatedProducts productId={id} categoryId={categoryId} />}
     </div>
+  </>
   );
 };
 

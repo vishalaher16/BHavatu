@@ -32,7 +32,7 @@ export default function Login ({ setPic,setlog,log}) {
             return signInWithPopup(auth, provider);
         }).then((result) => {
             console.log(result);
-            setPic(result.user.photoURL);  // Set the profile picture
+            setPic(user.photoURL);  // Set the profile picture
             setIsLoggedIn(true);
         }).catch((error) => {
             console.log(error);

@@ -1,4 +1,6 @@
 // src/firebase.js
+import { getAnalytics } from "firebase/analytics";
+
 
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
@@ -16,21 +18,8 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+export const analytics = getAnalytics(app); 
 
-// Initialize Firestore
-export const db = getFirestore(app);
-
-// Initialize Firebase Authentication
-export const auth = getAuth(app);
-
-// Export Google Sign-In function
-export const signInWithGoogle = async () => {
-  const provider = new GoogleAuthProvider();
-  try {
-    const result = await signInWithPopup(auth, provider);
-    console.log('User signed in: ', result.user);
-    // Here you can handle the signed-in user
-  } catch (error) {
-    console.error('Error signing in with Google: ', error);
-  }
-};
+export const auth = getAuth();
+const db=getFirestore(app);
+ export {db};

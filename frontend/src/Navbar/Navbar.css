@@ -98,3 +98,9 @@
     border-radius: 5px;
 
 }
+.disabled {
+  pointer-events: none; /* Disable clicking */
+  color: gray; /* Change color to indicate disabled state */
+  text-decoration: none; /* Remove underline */
+}
+

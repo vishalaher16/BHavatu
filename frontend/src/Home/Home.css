@@ -90,9 +90,9 @@ h1 {
 }
 
 .grid-cards {
-  display: grid;
+  display:flex;
   grid-template-columns: repeat(4, 1fr); /* Four cards in a row */
-  gap: 20px; /* Space between cards */
+  gap: 40px; /* Space between cards */
   width: 100%;
   box-sizing: border-box; /* Include padding in width calculation */
 }

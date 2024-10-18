@@ -66,50 +66,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="card-container">
-            <div className="gradient-wrapper blue-gradient">
-              <img src="https://religionworld.s3.amazonaws.com/uploads/2019/07/kundli-milaan-ke-baad-copy.jpg" alt="Card Image" />
-              <h3 className="text-title">KUNDLI</h3>
-              <p className="text-description">
-                Save your Kundli here and get a personal space
-              </p>
-              <Link to="/kundli" className="read-more-btn">Read More</Link>
-            </div>
-          </div>
-
-          <div className="card-container">
-            <div className="gradient-wrapper blue-gradient">
-              <img src="https://www.omshivjyotish.com/assets/images/main/2.jpg" alt="Card Image" />
-              <h3 className="text-title">KUNDLI MatchMAking</h3>
-              <p className="text-description">
-                Let's try to find you a compatible partner with a great study of Kundli and history of knowledge
-              </p>
-              <Link to="/kundli-matchmaking" className="read-more-btn">Read More</Link>
-            </div>
-          </div>
-
-          <div className="card-container">
-            <div className="gradient-wrapper blue-gradient">
-              <img src="https://cdn.elearningindustry.com/wp-content/uploads/2019/02/gamified-microlearning-activities-boost-impact-corporate-training.png" alt="Card Image" />
-              <h3 className="text-title">AI Assistant</h3>
-              <p className="text-description">
-                Reyna, an AI assistant that guides you with your personal questions and queries
-              </p>
-              <Link to="/Assistant" className="read-more-btn">Read More</Link>
-            </div>
-          </div>
-
-          <div className="card-container">
-            <div className="gradient-wrapper blue-gradient">
-              <img src="https://orageek.com/wp-content/uploads/2020/07/data-security-1.jpg" alt="Card Image" />
-              <h3 className="text-title">login</h3>
-              <p className="text-description">
-                Login for further future part of BHAvatu family
-              </p>
-              <Link to="/Login" className="read-more-btn">Read More</Link>
-            </div>
-          </div>
-
+        
         </div>
       </div>
     </>

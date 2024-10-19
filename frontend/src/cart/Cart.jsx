@@ -5,6 +5,7 @@ import { BsCart } from "react-icons/bs";
 import CartItem from './cartitem/cartitem';
 import { Context } from '../../utils/context';
 import axios from 'axios';
+import { toast } from 'react-toastify'; // Import the toast library
 
 const Cart = ({ setShowCart }) => {
     const { cartItems } = useContext(Context);
@@ -28,7 +29,8 @@ const Cart = ({ setShowCart }) => {
             image: 'https://your-logo-url',
             handler: async function (response) {
                 // Payment success callback
-                await saveOrder(response.razorpay_payment_id);
+                // Display a toast notification for successful order placement
+                toast.success("Order placed successfully!"); // Add this line
             },
             prefill: {
                 name: "Customer Name",
@@ -76,18 +78,27 @@ const Cart = ({ setShowCart }) => {
         };
 
         try {
+            // Call your backend to get the JWT token
+            const authResponse = await axios.post('http://localhost:1337/auth/local', {
+                identifier: 'admin', // Change to your admin identifier
+                password: 'password', // Change to the actual password
+            });
+
+            const jwtToken = authResponse.data.jwt;
+
+            // Send order data to your orders API
             const response = await axios.post('http://localhost:1337/orders', orderData, {
                 headers: {
-                    'Authorization': `Bearer YOUR_API_TOKEN`, // Ensure this is correct
+                    'Authorization': `Bearer ${jwtToken}`, // Use the JWT token for authorization
                 },
             });
 
-            console.log('Order saved response:', response.data); // Log response for debugging
-            alert("Order saved successfully!"); // Notify user of success
+            console.log('Order saved response:', response.data);
+            alert("Order saved successfully!"); 
             setShowCart(false); // Close the cart after successful order
         } catch (err) {
             console.error("Error saving order:", err.response ? err.response.data : err);
-            setError("Failed to save order. Please try again."); // Set error message
+            setError("Failed to save order. Please try again.");
         }
     };
 

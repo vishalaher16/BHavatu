@@ -47,7 +47,7 @@ export default function Login ({ setPic,setlog,log}) {
             <div className="login-box">
                 <h2>{isLoggedIn ? "Welcome back!" : "Login"}</h2>
                 {isLoggedIn ? (
-                    <p>You are already logged in! </p>
+                    <h1>You are already logged in! </h1>
                 ) : (
                     <form>
                         <div className="input-group">
@@ -63,9 +63,9 @@ export default function Login ({ setPic,setlog,log}) {
                             </label>
                         </div>
                         <button className="ebutton" type="submit">Log In</button>
+                        <p> <a href="#" onClick={googleLogin}>Register with Google</a></p>
                     </form>
                 )}
-                <p> <a href="#" onClick={googleLogin}>Register with Google</a></p>
             </div>
         </div>
     );

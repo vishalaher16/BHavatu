@@ -39,12 +39,12 @@ const EcomHeader = () => {
                 <div className="header-content">
                     <ul>
                         <li onClick={() => navigate('/prod')}>Home</li>
-                        <li onClick={() => navigate('/category')}>Cateegory</li>
+                        
                     </ul>
                     <div className="center"></div>
                     <div className="right">
                         <TbSearch onClick={() => setShowSearch(true)} />
-                        <AiOutlineHeart />
+                       
                         <span className="cart-icon" onClick={() => setShowCart(true)}>
                             <CgShoppingCart />
                             {cartCount > 0 && <span className="cart-count">{cartCount}</span>} {/* Display cart count */}

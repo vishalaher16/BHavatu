@@ -25,9 +25,10 @@ export default function Home() {
             <Link to="/Vastu" className="btn">
               Get Started
             </Link>
-            <Link to="/DailyFeed" className="play-btn">
-              <div className="play-icon">▶</div>
-            </Link>
+            <a href="/Bhavatu_Astrology_Marketplace.mp4" target="_blank" rel="noopener noreferrer" className="play-btn">
+  <div className="play-icon">▶</div>
+</a>
+
           </div>
         </div>
       </section>
@@ -35,7 +36,7 @@ export default function Home() {
         <div className="grid-cards">
           <div className="card-container">
             <div className="gradient-wrapper green-gradient">
-              <img src="https://www.thepackersmovers.com/blog/wp-content/uploads/2021/09/vastu-tips-2.jpg" alt="Card Image" />
+              <img src="https://th.bing.com/th/id/OIP.lGy0yjHcXjubXWVv5CgCnQAAAA?rs=1&pid=ImgDetMain" alt="Card Image" />
               <h3 className="text-title">VASTU ANALYSIS</h3>
               <p className="text-description">
                 AN AI BASED VASTU ANALYSIS POWERD CHATBOT

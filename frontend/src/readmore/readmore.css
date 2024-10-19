@@ -1,0 +1,58 @@
+.read-more-page {
+    padding: 40px; /* Add padding around the entire page */
+    font-family: Arial, sans-serif; /* Use a clean, sans-serif font */
+    background-color: #e361ca9e; /* Light gray background for contrast */
+    color: #333; /* Darker text color for readability */
+    max-width: 1000px; /* Max width for the content */
+    margin: auto; /* Center the container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.read-more-header {
+    text-align: center; /* Center align the header text */
+    margin-bottom: 30px; /* Space below the header */
+}
+
+.about-section, .mission-section, .values-section, .contact-section {
+    margin: 20px 0; /* Space between sections */
+    padding: 20px; /* Padding inside each section */
+    background-color:#6516aa52; /* White background for sections */
+    border-radius: 5px; /* Rounded corners for sections */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow effect for sections */
+}
+.p{
+    color: antiquewhite;
+}
+h1, h2 {
+    color: white
+}
+
+h2 {
+    margin-top: 0; /* Remove top margin for h2 */
+}
+
+ul {
+    list-style-type: disc; /* Use disc style for lists */
+    padding-left: 20px; /* Space for bullet points */
+}
+
+footer {
+    text-align: center; /* Center align footer text */
+    margin-top: 40px; /* Space above the footer */
+    font-size: 0.9em; /* Slightly smaller font for footer */
+    color: #7F8C8D; /* Light gray color for footer text */
+}
+
+footer p {
+    font-style: italic;
+    color: antiquewhite;
+    margin: 0; /* Remove default margin */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .read-more-page {
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+}

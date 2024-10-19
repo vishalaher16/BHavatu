@@ -17,7 +17,12 @@
   import RelatedProducts from "./RelatedProducts/RelatedProducts";
   import Search from "./search/search";
   import Category from "./Category/category";
+  import ReadMore from "./readmore/readmore";
   import IndiviCategory from "./individualcategory/indivicategory";
+  import ContactUs from "./contact/contactus";
+  import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
   function App() {
     const [cart, setCart] = useState([]);
@@ -45,13 +50,18 @@
           <Route path="/prod" element={<Prod />} />
           <Route path="/product/:id" element={< Singleproduct/>} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/ContactUs" element={<ContactUs />} />
+
           <Route path="/chatbot" element={<ChatbotButton />} />
+          <Route path="/readmore" element={<ReadMore/>} />
           <Route path="/RelatedProducts" element={<RelatedProducts />} />
           <Route path="/Search" element={<Search />} />
 
 
           
         </Routes>
+        <ToastContainer /> 
+        
         <Footer />
       </div>
     

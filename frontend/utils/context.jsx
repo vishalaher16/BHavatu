@@ -77,6 +77,11 @@ const AppProvider = ({ children }) => {
         });
     };
 
+    // Clear the cart
+    const clearCart = () => {
+        setCartItems([]);
+    };
+
     return (
         <Context.Provider
             value={{
@@ -92,6 +97,7 @@ const AppProvider = ({ children }) => {
                 setShowCart,
                 handleCartProductQuantity,
                 cartSubTotal,
+                clearCart, // Exposing clearCart function
             }}
         >
             {children}

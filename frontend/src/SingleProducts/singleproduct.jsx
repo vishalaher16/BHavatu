@@ -102,10 +102,7 @@ const SingleProduct = () => {
         </div>
       </div>
 
-      {/* Cart Icon Button */}
-      <button className="cart-icon" onClick={() => setShowCart(prev => !prev)} aria-label="Toggle Cart">
-        <BsCart size={30} className={showCart ? 'active' : ''} /> {/* Highlighted if cart is shown */}
-      </button>
+     
 
       {/* Cart Component */}
       {showCart && <Cart setShowCart={setShowCart} />} {/* Ensure you have this component */}
